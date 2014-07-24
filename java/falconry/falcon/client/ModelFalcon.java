@@ -9,7 +9,11 @@
 
 
 
-package net.minecraft.src;
+package falconry.falcon.client;
+
+import net.minecraft.client.model.ModelBase;
+import net.minecraft.client.model.ModelRenderer;
+import net.minecraft.entity.Entity;
 
 public class ModelFalcon extends ModelBase
 {
@@ -648,93 +652,143 @@ public class ModelFalcon extends ModelBase
       setRotation(wing3R, 0F, -0.0698132F, 0F);
       wing3R.mirror = false;
   }
-  
+
+    float f5 = 0.0625F;
+
   public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
   {
     super.render(entity, f, f1, f2, f3, f4, f5);
     setRotationAngles(f, f1, f2, f3, f4, f5);
-    neck.render(f5);
-    feather11L.render(f5);
-    feather10L.render(f5);
-    feather9L.render(f5);
-    feather8L.render(f5);
-    feather7L.render(f5);
-    feather6L.render(f5);
-    feather5L.render(f5);
-    feather4L.render(f5);
-    feather3L.render(f5);
-    feather2L.render(f5);
-    feather1L.render(f5);
-    wing1L.render(f5);
-    wing2L.render(f5);
-    wing3L.render(f5);
-    closedwing3R.render(f5);
-    closedwing4R.render(f5);
-    closedwing1R.render(f5);
-    closedwing5R.render(f5);
-    closedwing2R.render(f5);
-    closedwing6R.render(f5);
-    upperlegR.render(f5);
-    lowerlegR.render(f5);
-    talon1R.render(f5);
-    talon2R.render(f5);
-    talon3R.render(f5);
-    talon4R.render(f5);
-    upperlegL.render(f5);
-    lowerlegL.render(f5);
-    talon1L.render(f5);
-    talon2L.render(f5);
-    talon3L.render(f5);
-    talon4L.render(f5);
-    tail2R.render(f5);
-    tail1.render(f5);
-    tail3R.render(f5);
-    tail2L.render(f5);
-    tail3L.render(f5);
-    tail.render(f5);
-    head1.render(f5);
-    head2.render(f5);
-    head3.render(f5);
-    head4.render(f5);
-    head5.render(f5);
-    head6.render(f5);
-    head2L.render(f5);
-    head1L.render(f5);
-    head1R.render(f5);
-    head2R.render(f5);
-    eyes.render(f5);
-    lowerbeak1.render(f5);
-    lowerbeak2.render(f5);
-    beak1.render(f5);
-    beak2.render(f5);
-    beak3.render(f5);
-    beak4.render(f5);
-    body1.render(f5);
-    body2.render(f5);
-    body3.render(f5);
-    body4.render(f5);
-    body5.render(f5);
-    closedwing3L.render(f5);
-    closedwing4L.render(f5);
-    closedwing1L.render(f5);
-    closedwing5L.render(f5);
-    closedwing2L.render(f5);
-    closedwing6L.render(f5);
-    feather11R.render(f5);
-    feather10R.render(f5);
-    feather9R.render(f5);
-    feather8R.render(f5);
-    feather7R.render(f5);
-    feather6R.render(f5);
-    feather5R.render(f5);
-    feather4R.render(f5);
-    feather3R.render(f5);
-    feather2R.render(f5);
-    feather1R.render(f5);
-    wing1R.render(f5);
-    wing2R.render(f5);
-    wing3R.render(f5);
   }
+    public void renderNeck()
+    {
+        //neck
+        neck.render(f5);
+    }
+
+    public void renderLeftWing()
+    {
+        //left wing
+        feather11L.render(f5);
+        feather10L.render(f5);
+        feather9L.render(f5);
+        feather8L.render(f5);
+        feather7L.render(f5);
+        feather6L.render(f5);
+        feather5L.render(f5);
+        feather4L.render(f5);
+        feather3L.render(f5);
+        feather2L.render(f5);
+        feather1L.render(f5);
+        wing1L.render(f5);
+        wing2L.render(f5);
+        wing3L.render(f5);
+    }
+
+    public void renderClosedWingRight()
+    {
+        //closed wind right
+        closedwing3R.render(f5);
+        closedwing4R.render(f5);
+        closedwing1R.render(f5);
+        closedwing5R.render(f5);
+        closedwing2R.render(f5);
+        closedwing6R.render(f5);
+    }
+
+    public void renderLegs()
+    {
+        //leg right
+        upperlegR.render(f5);
+        lowerlegR.render(f5);
+        talon1R.render(f5);
+        talon2R.render(f5);
+        talon3R.render(f5);
+        talon4R.render(f5);
+        //leg left
+        upperlegL.render(f5);
+        lowerlegL.render(f5);
+        talon1L.render(f5);
+        talon2L.render(f5);
+        talon3L.render(f5);
+        talon4L.render(f5);
+    }
+
+
+    public void renderTail()
+    {
+        //tail
+        body5.render(f5);
+        tail2R.render(f5);
+        tail1.render(f5);
+        tail3R.render(f5);
+        tail2L.render(f5);
+        tail3L.render(f5);
+        tail.render(f5);
+    }
+
+
+    public void renderHead()
+    {
+        //head
+        head1.render(f5);
+        head2.render(f5);
+        head3.render(f5);
+        head4.render(f5);
+        head5.render(f5);
+        head6.render(f5);
+        head2L.render(f5);
+        head1L.render(f5);
+        head1R.render(f5);
+        head2R.render(f5);
+        eyes.render(f5);
+        lowerbeak1.render(f5);
+        lowerbeak2.render(f5);
+        beak1.render(f5);
+        beak2.render(f5);
+        beak3.render(f5);
+        beak4.render(f5);
+    }
+
+    public void renderBody()
+    {
+        //body
+        body1.render(f5);
+        body2.render(f5);
+        body3.render(f5);
+        body4.render(f5);
+    }
+
+
+    public void renderClosedWingLeft()
+    {
+        //closed wing left
+        closedwing3L.render(f5);
+        closedwing4L.render(f5);
+        closedwing1L.render(f5);
+        closedwing5L.render(f5);
+        closedwing2L.render(f5);
+        closedwing6L.render(f5);
+    }
+
+    public void renderRightWing()
+    {
+        //wing right
+        feather11R.render(f5);
+        feather10R.render(f5);
+        feather9R.render(f5);
+        feather8R.render(f5);
+        feather7R.render(f5);
+        feather6R.render(f5);
+        feather5R.render(f5);
+        feather4R.render(f5);
+        feather3R.render(f5);
+        feather2R.render(f5);
+        feather1R.render(f5);
+        wing1R.render(f5);
+        wing2R.render(f5);
+        wing3R.render(f5);
+    }
   
   private void setRotation(ModelRenderer model, float x, float y, float z)
   {
@@ -745,7 +799,7 @@ public class ModelFalcon extends ModelBase
   
   public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5)
   {
-    super.setRotationAngles(f, f1, f2, f3, f4, f5);
+    super.setRotationAngles(f, f1, f2, f3, f4, f5, null);
   }
 
 }
