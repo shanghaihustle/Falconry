@@ -14,7 +14,7 @@ import net.minecraft.item.Item;
 /**
  * Created by Clarky158 on 24/07/2014.
  * <p/>
- * Electrolysm is an open source Minecraft mod
+ * Falconry is an open source Minecraft mod
  * released under version 3 of the GNU Lesser
  * General Public License. This means that
  * the source of this mod is publicly available
